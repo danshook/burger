@@ -9,3 +9,16 @@
     <button data-id='{{id}}' id="devourIt">Devour it!</button>
     <br> {{/unless}} {{/each}}
 </div>
+<div id="devoured">
+    <h5>Burgers already Devoured!</h5>
+    {{#each burgers}} {{#if devoured}}
+    <h4>{{id}} . {{burger_name}}</h4>
+    <br> {{/if}} {{/each}}
+</div>
+<div id="submitNew">
+    <input type="text" name="burger_name" id="burgerName" placeholder="Enter Burger Name">
+    <input type="submit" name="submit" value="Submit" id="submitNewBurger">
+    <br>
+    <br>
+    <h6>Enter a burger you want to eat and then hit submit.</h6>
+</div>
