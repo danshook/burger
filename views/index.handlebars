@@ -1,1 +1,11 @@
 <h1>Eat da Burger!</h1>
+<img src="/assets/img/burger.png">
+<br>
+<br>
+<div id="notDevoured">
+    <h5>Burgers ready to Devour!</h5>
+    {{#each burgers}} {{#unless devoured}}
+    <h4>{{id}} . {{burger_name}}</h4>
+    <button data-id='{{id}}' id="devourIt">Devour it!</button>
+    <br> {{/unless}} {{/each}}
+</div>

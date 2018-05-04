@@ -9,7 +9,7 @@ var orm = {
         throw err;
       }
       cb(result);
-      console.log("I got my results!");
+      console.log("SELECT ALL IS LOGGING!");
     });
   },
 
@@ -28,6 +28,7 @@ var orm = {
         throw err;
       }
       cb(result);
+      console.log("INSERT ONE IS LOGGING!");
     });
   }
 };
