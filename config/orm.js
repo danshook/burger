@@ -3,7 +3,8 @@ var connection = require("./connection");
 var orm = {
   selectAll: function(tableName, cb) {
     var queryString = "SELECT * FROM " + tableName + ";";
-
+    //"SELECT * FROM  burger"
+    console.log("My argument replacing parameter tableName is : " + tableName);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
