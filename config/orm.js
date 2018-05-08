@@ -31,7 +31,22 @@ var orm = {
       cb(result);
       console.log("INSERT ONE IS LOGGING!");
     });
+  },
+
+  updateOne: function(tableName, objColVals, condition, cb) {
+    var queryString = "UPDATE " + tableName;
+
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
+    queryString += " WHERE ";
+    queryString += condition;
+
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
   }
 };
-
 module.exports = orm;
